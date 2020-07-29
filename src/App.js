@@ -1,26 +1,36 @@
 import React from 'react';
-import logo from './logo.svg';
+import { connect } from 'react-redux'
+import { BrowserRouter } from 'react-router-dom'
+
+import { Template } from './Components/mainComponents'
+import Header from './Components/Partials/Header'
+import Footer from './Components/Partials/Footer'
+
+import Router from './Router'
 import './App.css';
 
-function App() {
+function App(props) {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+   <BrowserRouter>
+    <Template>
+      <Header />
+      <Router />
+      <Footer />
+    </Template>
+   </BrowserRouter>
   );
 }
 
-export default App;
+const mapStateToProps = state => {
+  return {
+    user:state.user
+  }
+}
+
+const mapDispatchToProps = dispath => {
+  return {
+
+  }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(App);
