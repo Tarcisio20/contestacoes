@@ -1,5 +1,7 @@
 import React from 'react'
-import { Switch, Route } from 'react-router-dom'
+import { Switch } from 'react-router-dom'
+
+import RouterHandler from './Components/RouteHandler'
 
 
 import Home from './Pages/Home'
@@ -9,9 +11,9 @@ import SignIn from './Pages/SignIn'
 export default () => {
     return (
         <Switch>
-            <Route exact path="/"><Home /></Route>
-            <Route exact path="/signin"><SignIn /></Route>
-            <Route><NotFound /></Route>
+            <RouterHandler private exact path="/"><Home /></RouterHandler>
+            <RouterHandler exact path="/signin"><SignIn /></RouterHandler>
+            <RouterHandler><NotFound /></RouterHandler>
         </Switch>
     )
 }
