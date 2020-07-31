@@ -2,6 +2,7 @@ import styled from 'styled-components'
 
 export const Area = styled.div`
 display: flex;
+flex-direction: column;
 form {
     display: block;
     margin: 45px auto;
@@ -21,7 +22,7 @@ form {
 
         input {
             outline:0;
-            border:1px solid #F5D231;
+            border:1px solid #017dc5;
             width:200px;
             border-radius:4px;
             height:30px;
@@ -30,24 +31,26 @@ form {
         }
 
         input:hover, input:focus {
-            border: 2px solid #F5D231;
+            border: 2px solid #017dc5;
         }
 
         input.form-button {
             display:flex;
             align-items:center;
             justify-content: center;
-            border:2px solid #F5D231 ;
+            border:2px solid #017dc5 ;
             background-color:transparent;
             font-size: 22px;
             height:40px;
-            color: #F5D231 ;
+            color: #017dc5 ;
             font-weight:bold;
             font-family: 'Roboto Mono', sans-serif;
-            transition: .2s;
+            padding:0;
+            transition-property: background-color;
+            transition-duration:1s;transition-timing-function:ease;
 
             &:hover {
-                background-color: rgba(245, 210, 49, 0.9);
+                background-color: rgba(1, 125, 197, 0.9);
                 color: #FFF;
             }
         }
