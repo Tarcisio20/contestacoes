@@ -12,7 +12,7 @@ export default (props) => {
                     <img src={ImageATM} alt="" />
                 </div>
                 <ul className="menu">
-                    <li>
+                    <li className="active">
                         <AccountBalanceWalletIcon color="primary" />
                         <label>Contestações</label>
                     </li>

@@ -43,6 +43,8 @@ display: flex;
             display:flex;
             align-items:center;
             padding:15px 15px;
+            transition-property: background-color;
+            transition-duration:1s;transition-timing-function:ease;
 
             label {
                 margin-right: 10px;
@@ -53,7 +55,13 @@ display: flex;
 
         li:hover, li.active {
             background-color:rgba(1, 125, 197, 0.8);
+            color:#DDD;
         }
     }
+}
+
+.area-right {
+    margin: 0 auto;
+    margin-top: 10px;
 }
 `
