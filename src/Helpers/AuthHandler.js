@@ -2,8 +2,7 @@ const Cookie = require('js-cookie')
 
 export const isLogged = () => {
     let token = Cookie.get('token')
-    //return (token) ? true : false
-    return false
+    return (token) ? true : false
 }
 
 export const doLogin = (token, rememberPassword = false) => {
