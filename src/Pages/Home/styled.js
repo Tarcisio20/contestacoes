@@ -28,5 +28,32 @@ display: flex;
             margin-top: 15px;
         }
     }
+
+    .menu {
+        padding:0;
+        margin:0;
+        ul, li {
+            margin:0;
+            padding:0;
+            list-style:none;
+        }
+
+
+        li {
+            display:flex;
+            align-items:center;
+            padding:15px 15px;
+
+            label {
+                margin-right: 10px;
+                margin-left: 10px;
+                color:#EEE;
+            }
+        }
+
+        li:hover, li.active {
+            background-color:rgba(1, 125, 197, 0.8);
+        }
+    }
 }
 `
