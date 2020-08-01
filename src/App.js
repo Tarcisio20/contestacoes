@@ -13,9 +13,7 @@ function App(props) {
   return (
    <BrowserRouter>
     <Template>
-      <Header />
       <Router />
-      <Footer />
     </Template>
    </BrowserRouter>
   );
