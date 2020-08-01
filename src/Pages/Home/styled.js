@@ -3,13 +3,12 @@ import styled from 'styled-components'
 export const Area = styled.div`
 font-family: Roboto, sans-serif;
 display: flex;
+flex-direction: row;
 
 .area-left {
+    max-width:300px;
     background-color:rgba(1, 125, 197, 0.8);
-    position:absolute;
-    left:0;
-    height: calc(100% - 50px);
-    paddin-right:10px;
+    height: 100vh;
 
     .area-img {
         background-color:rgba(1, 125, 197, 0.8);
@@ -61,7 +60,64 @@ display: flex;
 }
 
 .area-right {
-    margin: 0 auto;
+    flex:1;
+    margin-right:0;
     margin-top: 10px;
+    margin-left: 20px;
+
+    .table {
+        width: 95%;
+        text-align: center;
+        font-size: 15px;
+
+        thead {
+            color: #FFF;
+            font-weight:bold;background-color: #017dc5;
+            font-size:20px;
+        }
+
+        tbody tr:nth-child(2n) {
+            background-color: #ccc;
+        }
+
+        tbody tr td a {
+            background-color: transparent;
+            display:inline-block;
+            margin-right:3px;
+            margin-top:3px;
+            margin-bottom:3px;
+            padding:3px;
+            border-radius:4px;
+            transition-property: background-color;
+            transition-duration:0.5s;transition-timing-function:ease;
+
+            &.edit {
+                border: 1px solid blue;
+                color: blue;
+            }
+
+            &.delete {
+                border: 1px solid red;
+                color: red;
+            }
+        }
+
+        tbody tr td a.edit:hover {
+            background-color: blue;
+            color: #FFF;
+        }
+
+        tbody tr td a.delete:hover {
+            background-color: red;
+            color: #FFF;
+        }
+
+        tbody tr td:nth-child(1) {width:5%;}
+        tbody tr td:nth-child(2) {width:25%;}
+        tbody tr td:nth-child(3) {width:15%;}
+        tbody tr td:nth-child(4) {width:20%;}
+        tbody tr td:nth-child(5) {width:15%;}
+        tbody tr td:nth-child(6) {width:15%;}
+    }
 }
 `
