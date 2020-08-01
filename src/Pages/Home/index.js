@@ -65,6 +65,25 @@ export default (props) => {
                     </tr>
                     </tbody>
                 </table>
+                <div className="pagination">
+                    <ul>
+                        <li>
+                            <Link to="">Anterior</Link>
+                        </li>
+                        <li>
+                        <Link to="" className="active">2</Link>
+                        </li>
+                        <li>
+                        <Link to="">3</Link>
+                        </li>
+                        <li>
+                        <Link to="">4</Link>
+                        </li>
+                        <li>
+                        <Link to="">Posterior</Link>
+                        </li>
+                    </ul>
+                </div>
             </div>
         </Area>
     )
