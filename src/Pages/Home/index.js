@@ -5,6 +5,7 @@ import AccountBalanceWalletIcon from '@material-ui/icons/AccountBalanceWallet'
 import ExitToAppIcon from '@material-ui/icons/ExitToApp';
 import DeleteIcon from '@material-ui/icons/Delete';
 import EditIcon from '@material-ui/icons/Edit';
+import AddIcon from '@material-ui/icons/Add';
 import { Area } from './styled'
 
 export default (props) => {
@@ -27,6 +28,7 @@ export default (props) => {
             </div>
             <div className="area-right">
                 <h3>Area de informações</h3>
+                <Link className="buttonAdd" to="/"><AddIcon /></Link>
                 <table className="table">
                     <thead>
                     <tr>

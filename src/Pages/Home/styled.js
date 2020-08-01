@@ -65,6 +65,26 @@ flex-direction: row;
     margin-top: 10px;
     margin-left: 20px;
 
+    .buttonAdd{
+        display:block;
+        background-color:#7daf42;
+        width:50px;
+        height:50px;
+        text-align:center;
+        border-radius:50%;
+        color:#fff;
+        position:absolute;
+        bottom:30px;
+        right:50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        svg {
+            font-size:50px;
+        }
+    }
+
     .table {
         width: 95%;
         text-align: center;
