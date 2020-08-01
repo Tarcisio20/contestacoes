@@ -34,7 +34,21 @@ form {
             border: 2px solid #017dc5;
         }
 
-        input.form-button {
+        input[type="checkbox"] {
+            background-color: red;
+            width: 20px;
+            margin:0;
+            padding:0;
+        }
+
+        .text-diferent {
+            font-size: 20px;
+            margin:0;
+            padding:0;
+            margin-left: 15px;
+        }
+
+        button.form-button {
             display:flex;
             align-items:center;
             justify-content: center;
@@ -42,10 +56,12 @@ form {
             background-color:transparent;
             font-size: 22px;
             height:40px;
+            padding: 20px 40px;
+            border-radius: 4px;
             color: #017dc5 ;
             font-weight:bold;
+            cursor:pointer;
             font-family: 'Roboto Mono', sans-serif;
-            padding:0;
             transition-property: background-color;
             transition-duration:1s;transition-timing-function:ease;
 
@@ -54,6 +70,11 @@ form {
                 color: #FFF;
             }
         }
+    }
+
+    .div-diferent {
+        align-items: center;
+        justify-content: end;
     }
 }
 `
