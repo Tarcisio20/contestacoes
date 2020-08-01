@@ -65,6 +65,15 @@ flex-direction: row;
     margin-top: 10px;
     margin-left: 20px;
 
+    h3 {
+        text-align: center;
+        text-transform:uppercase;
+        color:#017dc5;
+        margin-bottom: 10px;
+        margin-top: 10px;
+        
+    }
+
     .buttonAdd{
         display:block;
         background-color:#7daf42;
