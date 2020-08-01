@@ -42,8 +42,11 @@ flex-direction: row;
             display:flex;
             align-items:center;
             padding:15px 15px;
-            transition-property: background-color;
-            transition-duration:1s;transition-timing-function:ease;
+            cursor:pointer;
+            border-right:5px solid transparent;
+            
+
+            transition: background-color 0.7s, border 0.7s;
 
             label {
                 margin-right: 10px;
@@ -54,6 +57,7 @@ flex-direction: row;
 
         li:hover, li.active {
             background-color:rgba(1, 125, 197, 0.8);
+            border-right:5px solid #3497d1;
             color:#DDD;
         }
     }
