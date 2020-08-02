@@ -41,7 +41,7 @@ export default (props) => {
                     <input type="date" />
                 </div>
                 <div className="div-input">
-                    <button type="submit" className="div-button-add">
+                    <button  className="div-button-add">
                         <SaveAltIcon />
                         Adicionar
                     </button>

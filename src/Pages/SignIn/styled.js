@@ -2,79 +2,91 @@ import styled from 'styled-components'
 
 export const Area = styled.div`
 display: flex;
-flex-direction: column;
-form {
-    display: block;
-    margin: 45px auto;
+justify-content: center;
+align-items: center;
+height: 100vh;
+font-family: 'Roboto Mono', sans-serif;
 
-    .div-form-input {
+.area-left {
+    display:flex;
+    flex-direction:column;
+    color:#017dc5;
+    font-size: 16px;
+    padding-right:20px;
+
+    svg {
+        margin: 0 auto;
+        width: 70px;
+        height: 70px;
+    }
+
+    h3 {
+        margin: 10px 0;
+        text-transform:uppercase;
+    }
+}
+
+form {
+    padding-left:10px;
+    padding-top:10px;
+    padding-bottom:10px;
+    border-left: 3px solid #017dc5;
+
+    .div-input {
         display:flex;
-        align-items:center;
-        justify-content:center;
-        margin-bottom: 10px;
+        margin-bottom:10px;
+        justify-content: center;
 
         label {
-            margin-right: 10px;
-            margin-bottom: 10px;
-            font-variant: all-petite-caps;
-            font-family: 'Roboto Mono', sans-serif;
-        }
-
-        input {
-            outline:0;
-            border:1px solid #017dc5;
-            width:200px;
-            border-radius:4px;
-            height:30px;
-            padding: 10px;
+            flex:1;
+            align-items: end;
+            color: #017dc5;       
             text-align:center;
         }
 
-        input:hover, input:focus {
-            border: 2px solid #017dc5;
+        input{
+           width: 300px;
+           margin-left: 10px;
+           border:1px solid  #017dc5;
+           border-radius:4px;
+           padding:0 10px;
+           outline:0;
+           color: #999; 
+           font-family: 'Roboto Mono', sans-serif;
+           text-align:center;
         }
 
-        input[type="checkbox"] {
-            background-color: red;
-            width: 20px;
-            margin:0;
-            padding:0;
+        input:focus {
+            border 2px solid #017dc5;
         }
 
-        .text-diferent {
-            font-size: 20px;
-            margin:0;
-            padding:0;
-            margin-left: 15px;
-        }
-
-        button.form-button {
-            display:flex;
-            align-items:center;
-            justify-content: center;
-            border:2px solid #017dc5 ;
-            background-color:transparent;
-            font-size: 22px;
-            height:40px;
-            padding: 20px 40px;
-            border-radius: 4px;
-            color: #017dc5 ;
-            font-weight:bold;
+        button {
+            width: 200px;
+            height: 40px;
+            margin-right: 10px;
             cursor:pointer;
-            font-family: 'Roboto Mono', sans-serif;
-            transition-property: background-color;
-            transition-duration:1s;transition-timing-function:ease;
+            background-color:transparent;
+            font-size: 16px;
+            text-transform:uppercase;
+            border-radius:4px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 2px solid #017dc5;
+            color: #017dc5;
+            transition:0.7s ease;
+            text-decoration:none;
 
             &:hover {
-                background-color: rgba(1, 125, 197, 0.9);
-                color: #FFF;
+                background-color:#017dc5;
+                color:#FFF;  
+            }
+
+            sgv {
+                margin-right:10px;
             }
         }
-    }
 
-    .div-diferent {
-        align-items: center;
-        justify-content: end;
     }
 }
 `
