@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import { BoxMessageError } from './../../Components/mainComponents'
+import VpnKeyIcon from '@material-ui/icons/VpnKey';
 import ExitToAppIcon from '@material-ui/icons/ExitToApp';
 import ErrorIcon from '@material-ui/icons/Error';
 import { doLogin } from './../../Helpers/AuthHandler'
@@ -34,40 +35,45 @@ export default props => {
     }
 
     return (
-        <Area>
-           {error && <BoxMessageError>{error} <ErrorIcon /></BoxMessageError>
-            }
+        
+        <Area> 
+        {error && <BoxMessageError>{error} <ErrorIcon /></BoxMessageError>
+        }
+            <div className="area-left">
+                <VpnKeyIcon />
+                <h3>Fazer Login</h3>
+             </div>  
             <form onSubmit={handlerSubmit}>
-                <div className="div-form-input">
-                    <label>Login:</label>
+                <div className="div-input">
+                    <label>E-mail:</label>
                     <input type="email"
-                    required
-                    disabled={disabled}
-                    value={email}
-                    onChange={e=>setEmail(e.target.value)}
-                    />
+                        required
+                        disabled={disabled}
+                        value={email}
+                        onChange={e=>setEmail(e.target.value)}
+                        />
                 </div>
-                <div className="div-form-input">
+                <div className="div-input">
                     <label>Senha:</label>
                     <input type="password"
-                    required
-                    disabled={disabled}
-                    value={password}
-                    onChange={e=>setPassword(e.target.value)}
-                    />
+                        required
+                        disabled={disabled}
+                        value={password}
+                        onChange={e=>setPassword(e.target.value)}
+                        />
                 </div>
-                <div className="div-form-input div-diferent">
+                <div className="div-input">
+                    <label >Lembrar</label>
                     <input type="checkbox"
-                    disabled={disabled}
-                    checked={rememberPassowrd}
-                    onChange={()=>setRememberPassword(!rememberPassowrd)}
+                        disabled={disabled}
+                        checked={rememberPassowrd}
+                        onChange={()=>setRememberPassword(!rememberPassowrd)}
                     />
-                    <label className="text-diferent">Lembrar minha senha.</label>
                 </div>
-                <div className="div-form-input">
+                <div className="div-input">
                     <button type="submit" className="form-button">
                         <ExitToAppIcon />
-                        Logar
+                            Logar
                     </button>
                 </div>
             </form>
