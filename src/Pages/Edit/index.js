@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import AttachFileIcon from '@material-ui/icons/AttachFile';
+import EditIcon from '@material-ui/icons/Edit';
 import SaveAltIcon from '@material-ui/icons/SaveAlt';
 import KeyboardReturnIcon from '@material-ui/icons/KeyboardReturn';
 
@@ -10,8 +10,8 @@ export default (props) => {
     return (
         <Area>
             <div className="area-left">
-                <AttachFileIcon  />
-                <h3>Adicionar contestação</h3>
+                <EditIcon  />
+                <h3>Editar contestação #123456</h3>
             </div>
             <form>
                 <div className="div-input">
@@ -42,8 +42,8 @@ export default (props) => {
                 </div>
                 <div className="div-input">
                     <button type="submit" className="div-button-add">
-                        <SaveAltIcon />
-                        Adicionar
+                        <EditIcon />
+                        Editar
                     </button>
                     <Link className="div-button-exit" to="/" >
                         <KeyboardReturnIcon />
