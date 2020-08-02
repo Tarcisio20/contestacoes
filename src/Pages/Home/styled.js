@@ -4,6 +4,7 @@ export const Area = styled.div`
 font-family: Roboto, sans-serif;
 display: flex;
 flex-direction: row;
+font-family: 'Roboto Mono', sans-serif;
 
 .area-left {
     max-width:300px;

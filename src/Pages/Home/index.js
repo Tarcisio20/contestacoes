@@ -48,7 +48,7 @@ export default (props) => {
                         <td>R$ 1.200,00</td>
                         <td>Concluido</td>
                         <td>
-                            <Link className="edit" to=""><EditIcon  fontSize="small" /></Link>
+                            <Link className="edit" to="/edit/1"><EditIcon  fontSize="small" /></Link>
                             <Link className="delete" to=""><DeleteIcon  fontSize="small" /></Link>
                         </td>
                     </tr>
@@ -59,7 +59,7 @@ export default (props) => {
                         <td>R$ 1.200,00</td>
                         <td>Em andamento.</td>
                         <td>
-                            <Link className="edit" to=""><EditIcon  fontSize="small" /></Link>
+                            <Link className="edit" to="/edit/1"><EditIcon  fontSize="small" /></Link>
                             <Link className="delete" to=""><DeleteIcon  fontSize="small" /></Link>
                         </td>
                     </tr>
