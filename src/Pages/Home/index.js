@@ -28,7 +28,7 @@ export default (props) => {
             </div>
             <div className="area-right">
                 <h3>Area de informações</h3>
-                <Link className="buttonAdd" to="/"><AddIcon /></Link>
+                <Link className="buttonAdd" to="/add"><AddIcon /></Link>
                 <table className="table">
                     <thead>
                     <tr>
