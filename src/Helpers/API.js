@@ -1,5 +1,7 @@
+import  BASE_API  from './../config'
+
 const apiFetchPost = async (endpoint, body) => {
-    const res = await fetch(process.env.BASE_API+endpoint, {
+    const res = await fetch(BASE_API+endpoint, {
         method:'POST',
         headers:{
             'Accept':'application/json',
@@ -17,6 +19,14 @@ const API = {
             '/user/signin',
             { email, password }
         )
+        return json
+    },
+    insert: async (params) => {
+        const json = await apiFetchPost(
+            '/api/insert.php',
+            {params}
+        )
+
         return json
     }
 }
