@@ -1,3 +1,4 @@
+import axios  from 'axios'
 import $ from 'jquery'
 import  BASE_API  from './../config'
 
@@ -38,7 +39,7 @@ const API = {
             }
         )
 
-        return json*/
+        return json
         await $.ajax({
             method:'POST',
             url: 'https://contestacoes.000webhostapp.com/api/insert.php',
@@ -62,6 +63,35 @@ const API = {
             console.log(data);
             return error.json()
         })
+        await axios.post(BASE_API+'/api/insert.php', {
+            numContest: numContest,
+            name: name,
+            cpf: cpf,
+            terminal: terminal,
+            valor: valor,
+            status: status,
+            data: data,
+        }).then(function (response){
+            console.log(response)
+        })*/
+        let response = () => {
+            return new  Promise(function(resolve, reject){
+                fetch(BASE_API+'/api/insert.php', {
+                    numContest: numContest,
+                    name: name,
+                    cpf: cpf,
+                    terminal: terminal,
+                    valor: valor,
+                    status: status,
+                    data: data
+                }).then(response => {
+                    resolve(response)
+                })
+            })
+        }
+
+        let resp = await response()
+        return resp
        
     }
 }
