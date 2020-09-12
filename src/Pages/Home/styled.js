@@ -6,10 +6,19 @@ display: flex;
 flex-direction: row;
 font-family: 'Roboto Mono', sans-serif;
 
+@media (max-width: 400px){
+    flex-direction: column;
+}
+
 .area-left {
     max-width:300px;
     background-color:rgba(1, 125, 197, 0.8);
     height: 100vh;
+
+    @media (max-width: 400px){
+        height: auto;
+        max-width: 100%;
+    }
 
     .area-img {
         background-color:rgba(1, 125, 197, 0.8);
@@ -70,6 +79,10 @@ font-family: 'Roboto Mono', sans-serif;
     margin-top: 10px;
     margin-left: 20px;
 
+    @media (max-width: 400px){
+        margin: 10px 10px;
+    }
+
     h3 {
         text-align: center;
         text-transform:uppercase;
@@ -94,20 +107,50 @@ font-family: 'Roboto Mono', sans-serif;
         align-items: center;
         justify-content: center;
 
+        @media (max-width: 400px){
+            bottom: 10px;
+            right: 10px;
+            width:30px;
+            height:30px;
+         }
+
         svg {
             font-size:50px;
+            @media (max-width: 400px){
+                font-size: 30px;
+            }
         }
     }
+
+    
 
     .table {
         width: 95%;
         text-align: center;
         font-size: 15px;
+        @media (max-width: 400px){
+            font-size: 12px;
+            margin: 5px;
+        }
 
         thead {
             color: #FFF;
             font-weight:bold;background-color: #017dc5;
             font-size:20px;
+
+            
+            
+        }
+
+        thead tr th:nth-child(1) {
+            @media (max-width: 400px){
+                display: none;
+            }
+        }
+        thead tr th:nth-child(2) {
+            @media (max-width: 400px){
+                display: none;
+            }
         }
 
         tbody tr:nth-child(2n) {
@@ -146,8 +189,17 @@ font-family: 'Roboto Mono', sans-serif;
             color: #FFF;
         }
 
-        tbody tr td:nth-child(1) {width:5%;}
-        tbody tr td:nth-child(2) {width:25%;}
+        tbody tr td:nth-child(1) {width:5%;
+            @media (max-width: 400px){
+                display: none;
+            }
+        }
+        tbody tr td:nth-child(2) {width:25%;
+        
+            @media (max-width: 400px){
+                display: none;
+            }
+        }
         tbody tr td:nth-child(3) {width:15%;}
         tbody tr td:nth-child(4) {width:20%;}
         tbody tr td:nth-child(5) {width:15%;}
