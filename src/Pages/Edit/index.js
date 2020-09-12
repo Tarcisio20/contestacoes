@@ -11,7 +11,7 @@ export default (props) => {
         <Area>
             <div className="area-left">
                 <EditIcon  />
-                <h3>Editar contestação #123456</h3>
+                <h3>Editar contestação <br/> #123456</h3>
             </div>
             <form>
                 <div className="div-input">

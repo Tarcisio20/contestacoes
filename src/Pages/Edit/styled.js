@@ -6,6 +6,9 @@ justify-content: center;
 align-items: center;
 height: 100vh;
 font-family: 'Roboto Mono', sans-serif;
+@media (max-width: 400px){
+    flex-direction: column;
+}
 
 .area-left {
     display:flex;
@@ -23,6 +26,7 @@ font-family: 'Roboto Mono', sans-serif;
     h3 {
         margin: 10px 0;
         text-transform:uppercase;
+        text-align:center;
     }
 }
 
@@ -31,11 +35,19 @@ form {
     padding-top:10px;
     padding-bottom:10px;
     border-left: 3px solid #017dc5;
+    @media (max-width: 400px){
+        border-left: 0;
+        border-top: 3px solid #017dc5;
+    }
 
     .div-input {
         display:flex;
         margin-bottom:10px;
         justify-content: center;
+
+        @media (max-width: 400px){
+            flex-direction: column;
+        }
 
         label {
             flex:1;
@@ -54,6 +66,10 @@ form {
            color: #999; 
            font-family: 'Roboto Mono', sans-serif;
            text-align:center;
+
+           @media (max-width: 400px){
+               height: 30px;
+           }
         }
 
         input:focus, select:focus {
@@ -74,6 +90,11 @@ form {
             justify-content: center;
             transition:0.7s ease;
             text-decoration:none;
+
+            @media (max-width: 400px){
+                margin-top: 5px;
+                width: 100%;
+            }
 
 
             sgv {
